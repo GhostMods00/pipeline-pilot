@@ -6,7 +6,7 @@ on:
       - develop
 
 jobs:
-  test:
+  cupress-test:
     runs-on: ubuntu-latest
     services:
       mongodb:
