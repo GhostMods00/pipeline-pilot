@@ -44,7 +44,7 @@ jobs:
         run: npm run test-component
         env:
           MONGODB_URI: mongodb://localhost:27017/Waleed
-          
+          # Updated to use the correct URL
       - name: Upload Test Results
         if: always()
         uses: actions/upload-artifact@v4
