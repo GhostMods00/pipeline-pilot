@@ -116,12 +116,14 @@ The deployment phase manages the release process:
 2. Navigate to Settings > Branches
 3. Add branch protection rules:
    - For `develop` branch:
+   - 
      ```
      ✓ Require pull request reviews
      ✓ Require status checks to pass
      ✓ Require Cypress tests to pass
      ```
    - For `main` branch:
+   - 
      ```
      ✓ Require pull request reviews
      ✓ Restrict pushes
@@ -129,11 +131,13 @@ The deployment phase manages the release process:
      ```
 
 #### 2. ⚙️ Configure Environment Variables
-Create the following secrets in your GitHub repository:
+Render Configuration:
 ```
 MONGODB_URI=your_mongodb_connection_string
-RENDER_API_KEY=your_render_api_key
-NODE_ENV=production
+```
+GitHub Secrets Configuration:
+```
+Add RENDER_DEPLOY_HOOK_URL secret
 ```
 
 #### 3. 🌳 Branch Structure
